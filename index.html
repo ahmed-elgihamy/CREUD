@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- customize css -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    
+<div class="container">
+
+<div class="w-75 py-5 mx-auto table ">
+    <h1 >Product Management System</h1>
+    <div class="form-group my-3">
+        <label for="productName">product Name</label>
+         <input oninput="validateProductName()" type="text" id="productName" class="form-control">
+         <p class="text-danger d-none" id="checkName">Invalid Name (the first letter must be a capital letter and at lest 3 small letters)</p>
+    </div>
+
+
+    <div class="form-group mb-3 ">
+        <label for="productPrice">productPrice</label>
+         <input oninput="validateProductPrice()" type="text" id="productPrice" class="form-control">
+         <p class="text-danger d-none" id="checkPrice">Invalid Model (the price must be from 1000 to 10000)</p>
+
+    </div>
+
+
+    <div class="form-group mb-3">
+        <label for="productModel">product Model</label>
+         <input oninput="validateProductModel()" type="text" id="productModel" class="form-control">
+         <p class="text-danger d-none" id="checkModel">Invalid Model (the Model must be Tv or laptop or mobile)</p>
+         
+    </div>
+    
+
+    <div class="form-group mb-3">
+        <label for="productDec">productDec</label>
+         <textarea oninput="validateProductDec()" id="productDec"  class="form-control"></textarea>
+         <p class="text-danger d-none" id="checkDec">Invalid Model (the Model must be  at lest 50 char)</p>
+
+    </div>
+    <button onclick="addproduct()" class=" btn btn-info mb-5 "  id="AddProductBtn"> Add product</button>
+    <button onclick="Updateproduct()" class=" btn btn-warning mb-5  d-none"  id="UpdateProductBtn">Update product</button>
+
+<h4>Search....</h4>
+<input type="text" class="form-control" oninput="searchItem(this.value)">
+
+
+</div>
+
+
+
+<table  class="table  text-center mx-auto w-75 ">
+    <thead>
+        <td>index</td>
+        <td>proudactName</td>
+        <td>ProudactPrice</td>
+        <td>proudactModel</td>
+        <td>ProudactDec</td>
+        <td> Update</td>
+        <td> Delete</td>
+        </thead>
+        <tbody id="Tbody">
+        
+
+
+        </tbody>
+        
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+    <script src="script/main.js"></script>
+</body>
+</html>
